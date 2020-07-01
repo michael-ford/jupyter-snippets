@@ -29,7 +29,7 @@ def dvc_run(dest, dvc_file, output_files=False, dependencies=False, command=Fals
         dvc repro {dvc_file})
 
     else: # this is first run
-        dvc_call = ['dvc run', '--overwrite-dvcfile', '-f', dvc_file]
+        dvc_call = ['dvc run', '-f', dvc_file]
         if output_files: dvc_call.extend(['-o ' + x for x in output_files])
         if dependencies: dvc_call.extend(['-d ' + x for x in dependencies])
         if command: dvc_call.append('"'+command+'"')

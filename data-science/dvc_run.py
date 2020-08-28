@@ -1,6 +1,6 @@
 dvc_run(dest='',
-        dvc_file='',
+        stage_name='',
         output_files=[''],
-        dependencies=['']
+        dependencies=[''],
         command='',
-        env=)
+        env='')
